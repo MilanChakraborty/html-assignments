@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 const convertLine = (line) => {
-  return line.split("|").map((data) => `<td>${data}</td>`).join("\n");
+  return line.split("|").map((data) => `<td>${data}</td>`.replace(",", ", ")).join("\n");
 }
 
 const main = () => {
