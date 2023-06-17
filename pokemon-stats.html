@@ -2,7 +2,7 @@
 
 <head>
   <title>
-    tables
+    Pokemon Table
   </title>
   <style>
     body {
@@ -12,7 +12,8 @@
     }
 
     .logo {
-      width: 17em;
+      width: 25em;
+      height: 13em;
       margin-bottom: 1.8em;
     }
 
@@ -27,8 +28,12 @@
       border-collapse: collapse;
     }
 
-    .pokemon-stats>thead * {
+
+    .pokemon-stats>thead tr {
       background-color: #003a70;
+    }
+    
+    .pokemon-stats>thead th {
       color: #ffffff;
       font-weight: 400;
       text-align: left;
@@ -37,13 +42,20 @@
       padding: 0.7em;
     }
 
-    .pokemon-stats>tbody * {
+    .pokemon-stats>tbody tr {
+      background-color: #ffcb05;
+    }
+    
+    .pokemon-stats>tbody td {
       text-align: left;
       font-size: 1.1em;
       font-weight: 300;
       border-bottom: 0.1em solid #3d7dca;
       padding: 0.5em;
-      background-color: #ffcb05;
+    }
+
+    .pokemon-stats > tbody tr:hover {
+      background-color: #ffe063;
     }
   </style>
 </head>
