@@ -27,6 +27,7 @@
     .pokemon-stats {
       width: 100%;
       border-collapse: collapse;
+      border: 0.3em solid rgb(30, 70, 128);
     }
 
 
@@ -43,10 +44,6 @@
       padding: 0.7em;
     }
 
-    .pokemon-stats>tbody tr {
-      background-color: #ffd52b;
-    }
-
     .pokemon-stats>tbody td {
       text-align: left;
       font-size: 1.2em;
@@ -56,9 +53,112 @@
       padding: 0.5em;
     }
 
+    .pokemon-stats>tbody tr:nth-child(odd) {
+      background-color: #ffcf11;
+    }
+
+    .pokemon-stats>tbody tr:nth-child(even) {
+      background-color: #ffdb4a;
+    }
+
     .pokemon-stats>tbody tr:hover {
-      background-color: #ffe063;
+      background-color: #ffe47a;
       cursor: grab;
+    }
+
+    .poketype {
+      padding: 0.1em 0.2em;
+      border-radius: 10%;
+    }
+
+    .grass {
+      background-color: rgb(119, 181, 81);
+      color: white;
+    }
+
+    .normal {
+      background-color: rgb(190, 190, 175);
+      color: black;
+    }
+
+    .fire {
+      background-color: rgb(245, 93, 63);
+      color: yellow;
+    }
+
+    .electric {
+      background-color: rgb(119, 194, 222);
+      color: black;
+    }
+
+    .water {
+      background-color: rgb(80, 153, 247);
+      color: white;
+    }
+
+    .ice {
+      background-color: rgb(127, 203, 250);
+      color: black;
+    }
+
+    .fighting {
+      background-color: rgb(194, 111, 94);
+      color: yellow;
+    }
+
+    .poison {
+      background-color: rgb(179, 111, 170);
+      color: white;
+    }
+
+    .ground {
+      background-color: rgb(195, 167, 81);
+      color: black;
+    }
+
+    .flying {
+      background-color: rgb(138, 154, 248);
+      color: white;
+    }
+
+    .psychic {
+      background-color: rgb(236, 99, 152);
+      color: white;
+    }
+
+    .bug {
+      background-color: rgb(185, 195, 96);
+      color: black;
+    }
+
+    .rock {
+      background-color: rgb(184, 170, 111);
+      color: white;
+    }
+
+    .fairy {
+      background-color: rgb(246, 178, 253);
+      color: black;
+    }
+
+    .ghost {
+      background-color: rgb(101, 104, 181);
+      color: white;
+    }
+
+    .steel {
+      background-color: rgb(170, 170, 186);
+      color: black;
+    }
+
+    .dragon {
+      background-color: rgb(115, 106, 230);
+      color: white;
+    }
+
+    .dark {
+      background-color: rgb(114, 86, 71);
+      color: white;
     }
   </style>
 </head>
@@ -88,7 +188,9 @@
         <tr>
           <td>1</td>
           <td>bulbasaur</td>
-          <td>grass, poison</td>
+          <td> <span class="grass poketype">grass</span>
+            <span class="poison poketype">poison</span>
+          </td>
           <td>45</td>
           <td>45</td>
           <td>64</td>
@@ -99,7 +201,9 @@
         <tr>
           <td>2</td>
           <td>ivysaur</td>
-          <td>grass, poison</td>
+          <td> <span class="grass poketype">grass</span>
+            <span class="poison poketype">poison</span>
+          </td>
           <td>60</td>
           <td>60</td>
           <td>142</td>
@@ -110,7 +214,9 @@
         <tr>
           <td>3</td>
           <td>venusaur</td>
-          <td>grass, poison</td>
+          <td> <span class="grass poketype">grass</span>
+            <span class="poison poketype">poison</span>
+          </td>
           <td>80</td>
           <td>80</td>
           <td>236</td>
@@ -121,7 +227,7 @@
         <tr>
           <td>4</td>
           <td>charmander</td>
-          <td>fire</td>
+          <td><span class="fire poketype">fire</span></td>
           <td>65</td>
           <td>39</td>
           <td>62</td>
@@ -132,7 +238,7 @@
         <tr>
           <td>5</td>
           <td>charmeleon</td>
-          <td>fire</td>
+          <td><span class="fire poketype">fire</span></td>
           <td>80</td>
           <td>58</td>
           <td>142</td>
@@ -143,7 +249,7 @@
         <tr>
           <td>6</td>
           <td>charizard</td>
-          <td>fire, flying</td>
+          <td><span class="fire poketype">fire</span> <span class="flying poketype">flying</span></td>
           <td>100</td>
           <td>78</td>
           <td>240</td>
@@ -154,7 +260,7 @@
         <tr>
           <td>7</td>
           <td>squirtle</td>
-          <td>water</td>
+          <td><span class="water poketype">water</span></td>
           <td>43</td>
           <td>44</td>
           <td>63</td>
@@ -165,7 +271,7 @@
         <tr>
           <td>8</td>
           <td>wartortle</td>
-          <td>water</td>
+          <td><span class="water poketype">water</span></td>
           <td>58</td>
           <td>59</td>
           <td>142</td>
@@ -176,7 +282,7 @@
         <tr>
           <td>9</td>
           <td>blastoise</td>
-          <td>water</td>
+          <td><span class="water poketype">water</span></td>
           <td>78</td>
           <td>79</td>
           <td>239</td>
@@ -187,7 +293,7 @@
         <tr>
           <td>10</td>
           <td>caterpie</td>
-          <td>bug</td>
+          <td><span class="bug poketype">bug</span></td>
           <td>45</td>
           <td>45</td>
           <td>39</td>
@@ -198,7 +304,7 @@
         <tr>
           <td>11</td>
           <td>metapod</td>
-          <td>bug</td>
+          <td><span class="bug poketype">bug</span></td>
           <td>30</td>
           <td>50</td>
           <td>72</td>
@@ -209,7 +315,7 @@
         <tr>
           <td>12</td>
           <td>butterfree</td>
-          <td>bug, flying</td>
+          <td><span class="bug poketype">bug</span> <span class="flying poketype">flying</span></td>
           <td>70</td>
           <td>60</td>
           <td>178</td>
@@ -220,7 +326,7 @@
         <tr>
           <td>13</td>
           <td>weedle</td>
-          <td>bug, poison</td>
+          <td><span class="bug poketype">bug</span> <span class="poison poketype">poison</span></td>
           <td>50</td>
           <td>40</td>
           <td>39</td>
@@ -231,7 +337,7 @@
         <tr>
           <td>14</td>
           <td>kakuna</td>
-          <td>bug, poison</td>
+          <td><span class="bug poketype">bug</span> <span class="poison poketype">poison</span></td>
           <td>35</td>
           <td>45</td>
           <td>72</td>
@@ -242,7 +348,7 @@
         <tr>
           <td>15</td>
           <td>beedrill</td>
-          <td>bug, poison</td>
+          <td><span class="bug poketype">bug</span> <span class="poison poketype">poison</span></td>
           <td>75</td>
           <td>65</td>
           <td>178</td>
@@ -253,7 +359,9 @@
         <tr>
           <td>16</td>
           <td>pidgey</td>
-          <td>normal, flying</td>
+          <td> <span class="normal poketype">normal</span>
+            <span class="flying poketype">flying</span>
+          </td>
           <td>56</td>
           <td>40</td>
           <td>50</td>
@@ -264,7 +372,9 @@
         <tr>
           <td>17</td>
           <td>pidgeotto</td>
-          <td>normal, flying</td>
+          <td> <span class="normal poketype">normal</span>
+            <span class="flying poketype">flying</span>
+          </td>
           <td>71</td>
           <td>63</td>
           <td>122</td>
@@ -275,7 +385,9 @@
         <tr>
           <td>18</td>
           <td>pidgeot</td>
-          <td>normal, flying</td>
+          <td> <span class="normal poketype">normal</span>
+            <span class="flying poketype">flying</span>
+          </td>
           <td>101</td>
           <td>83</td>
           <td>216</td>
@@ -286,7 +398,8 @@
         <tr>
           <td>19</td>
           <td>rattata</td>
-          <td>normal</td>
+          <td> <span class="normal poketype">normal</span>
+          </td>
           <td>72</td>
           <td>30</td>
           <td>51</td>
@@ -297,7 +410,8 @@
         <tr>
           <td>20</td>
           <td>raticate</td>
-          <td>normal</td>
+          <td> <span class="normal poketype">normal</span>
+          </td>
           <td>97</td>
           <td>55</td>
           <td>145</td>
@@ -308,7 +422,9 @@
         <tr>
           <td>21</td>
           <td>spearow</td>
-          <td>normal, flying</td>
+          <td> <span class="normal poketype">normal</span>
+            <span class="flying poketype">flying</span>
+          </td>
           <td>70</td>
           <td>40</td>
           <td>52</td>
@@ -319,7 +435,9 @@
         <tr>
           <td>22</td>
           <td>fearow</td>
-          <td>normal, flying</td>
+          <td> <span class="normal poketype">normal</span>
+            <span class="flying poketype">flying</span>
+          </td>
           <td>100</td>
           <td>65</td>
           <td>155</td>
@@ -330,7 +448,7 @@
         <tr>
           <td>23</td>
           <td>ekans</td>
-          <td>poison</td>
+          <td><span class="poison poketype">poison</span></td>
           <td>55</td>
           <td>35</td>
           <td>58</td>
@@ -341,7 +459,7 @@
         <tr>
           <td>24</td>
           <td>arbok</td>
-          <td>poison</td>
+          <td><span class="poison poketype">poison</span></td>
           <td>80</td>
           <td>60</td>
           <td>157</td>
@@ -352,7 +470,7 @@
         <tr>
           <td>25</td>
           <td>pikachu</td>
-          <td>electric</td>
+          <td><span class="electric poketype">electric</span></td>
           <td>90</td>
           <td>35</td>
           <td>112</td>
@@ -363,7 +481,7 @@
         <tr>
           <td>26</td>
           <td>raichu</td>
-          <td>electric</td>
+          <td><span class="electric poketype">electric</span></td>
           <td>110</td>
           <td>60</td>
           <td>218</td>
@@ -374,7 +492,7 @@
         <tr>
           <td>27</td>
           <td>sandshrew</td>
-          <td>ground</td>
+          <td><span class="ground poketype">ground</span></td>
           <td>40</td>
           <td>50</td>
           <td>60</td>
@@ -385,7 +503,7 @@
         <tr>
           <td>28</td>
           <td>sandslash</td>
-          <td>ground</td>
+          <td><span class="ground poketype">ground</span></td>
           <td>65</td>
           <td>75</td>
           <td>158</td>
@@ -396,7 +514,7 @@
         <tr>
           <td>29</td>
           <td>nidoran-f</td>
-          <td>poison</td>
+          <td><span class="poison poketype">poison</span></td>
           <td>41</td>
           <td>55</td>
           <td>55</td>
@@ -407,7 +525,7 @@
         <tr>
           <td>30</td>
           <td>nidorina</td>
-          <td>poison</td>
+          <td><span class="poison poketype">poison</span></td>
           <td>56</td>
           <td>70</td>
           <td>128</td>
@@ -418,7 +536,7 @@
         <tr>
           <td>31</td>
           <td>nidoqueen</td>
-          <td>poison, ground</td>
+          <td><span class="poison poketype">poison</span> <span class="ground poketype">ground</span></td>
           <td>76</td>
           <td>90</td>
           <td>227</td>
@@ -429,7 +547,7 @@
         <tr>
           <td>32</td>
           <td>nidoran-m</td>
-          <td>poison</td>
+          <td><span class="poison poketype">poison</span></td>
           <td>50</td>
           <td>46</td>
           <td>55</td>
@@ -440,7 +558,7 @@
         <tr>
           <td>33</td>
           <td>nidorino</td>
-          <td>poison</td>
+          <td><span class="poison poketype">poison</span></td>
           <td>65</td>
           <td>61</td>
           <td>128</td>
@@ -451,7 +569,7 @@
         <tr>
           <td>34</td>
           <td>nidoking</td>
-          <td>poison, ground</td>
+          <td><span class="poison poketype">poison</span> <span class="ground poketype">ground</span></td>
           <td>85</td>
           <td>81</td>
           <td>227</td>
@@ -462,7 +580,7 @@
         <tr>
           <td>35</td>
           <td>clefairy</td>
-          <td>fairy</td>
+          <td><span class="fairy poketype">fairy</span></td>
           <td>35</td>
           <td>70</td>
           <td>113</td>
@@ -473,7 +591,7 @@
         <tr>
           <td>36</td>
           <td>clefable</td>
-          <td>fairy</td>
+          <td><span class="fairy poketype">fairy</span></td>
           <td>60</td>
           <td>95</td>
           <td>217</td>
@@ -484,7 +602,7 @@
         <tr>
           <td>37</td>
           <td>vulpix</td>
-          <td>fire</td>
+          <td><span class="fire poketype">fire</span></td>
           <td>65</td>
           <td>38</td>
           <td>60</td>
@@ -495,7 +613,7 @@
         <tr>
           <td>38</td>
           <td>ninetales</td>
-          <td>fire</td>
+          <td><span class="fire poketype">fire</span></td>
           <td>100</td>
           <td>73</td>
           <td>177</td>
@@ -506,7 +624,9 @@
         <tr>
           <td>39</td>
           <td>jigglypuff</td>
-          <td>normal, fairy</td>
+          <td> <span class="normal poketype">normal</span>
+            <span class="fairy poketype">fairy</span>
+          </td>
           <td>20</td>
           <td>115</td>
           <td>95</td>
@@ -517,7 +637,9 @@
         <tr>
           <td>40</td>
           <td>wigglytuff</td>
-          <td>normal, fairy</td>
+          <td> <span class="normal poketype">normal</span>
+            <span class="fairy poketype">fairy</span>
+          </td>
           <td>45</td>
           <td>140</td>
           <td>196</td>
@@ -528,7 +650,7 @@
         <tr>
           <td>41</td>
           <td>zubat</td>
-          <td>poison, flying</td>
+          <td><span class="poison poketype">poison</span> <span class="flying poketype">flying</span></td>
           <td>55</td>
           <td>40</td>
           <td>49</td>
@@ -539,7 +661,7 @@
         <tr>
           <td>42</td>
           <td>golbat</td>
-          <td>poison, flying</td>
+          <td><span class="poison poketype">poison</span> <span class="flying poketype">flying</span></td>
           <td>90</td>
           <td>75</td>
           <td>159</td>
@@ -550,7 +672,9 @@
         <tr>
           <td>43</td>
           <td>oddish</td>
-          <td>grass, poison</td>
+          <td> <span class="grass poketype">grass</span>
+            <span class="poison poketype">poison</span>
+          </td>
           <td>30</td>
           <td>45</td>
           <td>64</td>
@@ -561,7 +685,9 @@
         <tr>
           <td>44</td>
           <td>gloom</td>
-          <td>grass, poison</td>
+          <td> <span class="grass poketype">grass</span>
+            <span class="poison poketype">poison</span>
+          </td>
           <td>40</td>
           <td>60</td>
           <td>138</td>
@@ -572,7 +698,9 @@
         <tr>
           <td>45</td>
           <td>vileplume</td>
-          <td>grass, poison</td>
+          <td> <span class="grass poketype">grass</span>
+            <span class="poison poketype">poison</span>
+          </td>
           <td>50</td>
           <td>75</td>
           <td>221</td>
@@ -583,7 +711,8 @@
         <tr>
           <td>46</td>
           <td>paras</td>
-          <td>bug, grass</td>
+          <td><span class="bug poketype">bug</span> <span class="grass poketype">grass</span>
+          </td>
           <td>25</td>
           <td>35</td>
           <td>57</td>
@@ -594,7 +723,8 @@
         <tr>
           <td>47</td>
           <td>parasect</td>
-          <td>bug, grass</td>
+          <td><span class="bug poketype">bug</span> <span class="grass poketype">grass</span>
+          </td>
           <td>30</td>
           <td>60</td>
           <td>142</td>
@@ -605,7 +735,7 @@
         <tr>
           <td>48</td>
           <td>venonat</td>
-          <td>bug, poison</td>
+          <td><span class="bug poketype">bug</span> <span class="poison poketype">poison</span></td>
           <td>45</td>
           <td>60</td>
           <td>61</td>
@@ -616,7 +746,7 @@
         <tr>
           <td>49</td>
           <td>venomoth</td>
-          <td>bug, poison</td>
+          <td><span class="bug poketype">bug</span> <span class="poison poketype">poison</span></td>
           <td>90</td>
           <td>70</td>
           <td>158</td>
@@ -627,7 +757,7 @@
         <tr>
           <td>50</td>
           <td>diglett</td>
-          <td>ground</td>
+          <td><span class="ground poketype">ground</span></td>
           <td>95</td>
           <td>10</td>
           <td>53</td>
@@ -638,7 +768,7 @@
         <tr>
           <td>51</td>
           <td>dugtrio</td>
-          <td>ground</td>
+          <td><span class="ground poketype">ground</span></td>
           <td>120</td>
           <td>35</td>
           <td>149</td>
@@ -649,7 +779,8 @@
         <tr>
           <td>52</td>
           <td>meowth</td>
-          <td>normal</td>
+          <td> <span class="normal poketype">normal</span>
+          </td>
           <td>90</td>
           <td>40</td>
           <td>58</td>
@@ -660,7 +791,8 @@
         <tr>
           <td>53</td>
           <td>persian</td>
-          <td>normal</td>
+          <td> <span class="normal poketype">normal</span>
+          </td>
           <td>115</td>
           <td>65</td>
           <td>154</td>
@@ -671,7 +803,7 @@
         <tr>
           <td>54</td>
           <td>psyduck</td>
-          <td>water</td>
+          <td><span class="water poketype">water</span></td>
           <td>55</td>
           <td>50</td>
           <td>64</td>
@@ -682,7 +814,7 @@
         <tr>
           <td>55</td>
           <td>golduck</td>
-          <td>water</td>
+          <td><span class="water poketype">water</span></td>
           <td>85</td>
           <td>80</td>
           <td>175</td>
@@ -693,7 +825,7 @@
         <tr>
           <td>56</td>
           <td>mankey</td>
-          <td>fighting</td>
+          <td><span class="fighting poketype">fighting</span></td>
           <td>70</td>
           <td>40</td>
           <td>61</td>
@@ -704,7 +836,7 @@
         <tr>
           <td>57</td>
           <td>primeape</td>
-          <td>fighting</td>
+          <td><span class="fighting poketype">fighting</span></td>
           <td>95</td>
           <td>65</td>
           <td>159</td>
@@ -715,7 +847,7 @@
         <tr>
           <td>58</td>
           <td>growlithe</td>
-          <td>fire</td>
+          <td><span class="fire poketype">fire</span></td>
           <td>60</td>
           <td>55</td>
           <td>70</td>
@@ -726,7 +858,7 @@
         <tr>
           <td>59</td>
           <td>arcanine</td>
-          <td>fire</td>
+          <td><span class="fire poketype">fire</span></td>
           <td>95</td>
           <td>90</td>
           <td>194</td>
@@ -737,7 +869,7 @@
         <tr>
           <td>60</td>
           <td>poliwag</td>
-          <td>water</td>
+          <td><span class="water poketype">water</span></td>
           <td>90</td>
           <td>40</td>
           <td>60</td>
@@ -748,7 +880,7 @@
         <tr>
           <td>61</td>
           <td>poliwhirl</td>
-          <td>water</td>
+          <td><span class="water poketype">water</span></td>
           <td>90</td>
           <td>65</td>
           <td>135</td>
@@ -759,7 +891,7 @@
         <tr>
           <td>62</td>
           <td>poliwrath</td>
-          <td>water, fighting</td>
+          <td><span class="water poketype">water</span> <span class="fighting poketype">fighting</span></td>
           <td>70</td>
           <td>90</td>
           <td>230</td>
@@ -770,7 +902,7 @@
         <tr>
           <td>63</td>
           <td>abra</td>
-          <td>psychic</td>
+          <td><span class="psychic poketype">psychic</span></td>
           <td>90</td>
           <td>25</td>
           <td>62</td>
@@ -781,7 +913,7 @@
         <tr>
           <td>64</td>
           <td>kadabra</td>
-          <td>psychic</td>
+          <td><span class="psychic poketype">psychic</span></td>
           <td>105</td>
           <td>40</td>
           <td>140</td>
@@ -792,7 +924,7 @@
         <tr>
           <td>65</td>
           <td>alakazam</td>
-          <td>psychic</td>
+          <td><span class="psychic poketype">psychic</span></td>
           <td>120</td>
           <td>55</td>
           <td>225</td>
@@ -803,7 +935,7 @@
         <tr>
           <td>66</td>
           <td>machop</td>
-          <td>fighting</td>
+          <td><span class="fighting poketype">fighting</span></td>
           <td>35</td>
           <td>70</td>
           <td>61</td>
@@ -814,7 +946,7 @@
         <tr>
           <td>67</td>
           <td>machoke</td>
-          <td>fighting</td>
+          <td><span class="fighting poketype">fighting</span></td>
           <td>45</td>
           <td>80</td>
           <td>142</td>
@@ -825,7 +957,7 @@
         <tr>
           <td>68</td>
           <td>machamp</td>
-          <td>fighting</td>
+          <td><span class="fighting poketype">fighting</span></td>
           <td>55</td>
           <td>90</td>
           <td>227</td>
@@ -836,7 +968,9 @@
         <tr>
           <td>69</td>
           <td>bellsprout</td>
-          <td>grass, poison</td>
+          <td> <span class="grass poketype">grass</span>
+            <span class="poison poketype">poison</span>
+          </td>
           <td>40</td>
           <td>50</td>
           <td>60</td>
@@ -847,7 +981,9 @@
         <tr>
           <td>70</td>
           <td>weepinbell</td>
-          <td>grass, poison</td>
+          <td> <span class="grass poketype">grass</span>
+            <span class="poison poketype">poison</span>
+          </td>
           <td>55</td>
           <td>65</td>
           <td>137</td>
@@ -858,7 +994,9 @@
         <tr>
           <td>71</td>
           <td>victreebel</td>
-          <td>grass, poison</td>
+          <td> <span class="grass poketype">grass</span>
+            <span class="poison poketype">poison</span>
+          </td>
           <td>70</td>
           <td>80</td>
           <td>221</td>
@@ -869,7 +1007,7 @@
         <tr>
           <td>72</td>
           <td>tentacool</td>
-          <td>water, poison</td>
+          <td><span class="water poketype">water</span> <span class="poison poketype">poison</span></td>
           <td>70</td>
           <td>40</td>
           <td>67</td>
@@ -880,7 +1018,7 @@
         <tr>
           <td>73</td>
           <td>tentacruel</td>
-          <td>water, poison</td>
+          <td><span class="water poketype">water</span> <span class="poison poketype">poison</span></td>
           <td>100</td>
           <td>80</td>
           <td>180</td>
@@ -891,7 +1029,7 @@
         <tr>
           <td>74</td>
           <td>geodude</td>
-          <td>rock, ground</td>
+          <td><span class="rock poketype">rock</span> <span class="ground poketype">ground</span></td>
           <td>20</td>
           <td>40</td>
           <td>60</td>
@@ -902,7 +1040,7 @@
         <tr>
           <td>75</td>
           <td>graveler</td>
-          <td>rock, ground</td>
+          <td><span class="rock poketype">rock</span> <span class="ground poketype">ground</span></td>
           <td>35</td>
           <td>55</td>
           <td>137</td>
@@ -913,7 +1051,7 @@
         <tr>
           <td>76</td>
           <td>golem</td>
-          <td>rock, ground</td>
+          <td><span class="rock poketype">rock</span> <span class="ground poketype">ground</span></td>
           <td>45</td>
           <td>80</td>
           <td>223</td>
@@ -924,7 +1062,7 @@
         <tr>
           <td>77</td>
           <td>ponyta</td>
-          <td>fire</td>
+          <td><span class="fire poketype">fire</span></td>
           <td>90</td>
           <td>50</td>
           <td>82</td>
@@ -935,7 +1073,7 @@
         <tr>
           <td>78</td>
           <td>rapidash</td>
-          <td>fire</td>
+          <td><span class="fire poketype">fire</span></td>
           <td>105</td>
           <td>65</td>
           <td>175</td>
@@ -946,7 +1084,7 @@
         <tr>
           <td>79</td>
           <td>slowpoke</td>
-          <td>water, psychic</td>
+          <td><span class="water poketype">water</span> <span class="psychic poketype">psychic</span></td>
           <td>15</td>
           <td>90</td>
           <td>63</td>
@@ -957,7 +1095,7 @@
         <tr>
           <td>80</td>
           <td>slowbro</td>
-          <td>water, psychic</td>
+          <td><span class="water poketype">water</span> <span class="psychic poketype">psychic</span></td>
           <td>30</td>
           <td>95</td>
           <td>172</td>
@@ -968,7 +1106,7 @@
         <tr>
           <td>81</td>
           <td>magnemite</td>
-          <td>electric, steel</td>
+          <td><span class="electric poketype">electric</span> <span class="steel poketype">steel</span></td>
           <td>45</td>
           <td>25</td>
           <td>65</td>
@@ -979,7 +1117,7 @@
         <tr>
           <td>82</td>
           <td>magneton</td>
-          <td>electric, steel</td>
+          <td><span class="electric poketype">electric</span> <span class="steel poketype">steel</span></td>
           <td>70</td>
           <td>50</td>
           <td>163</td>
@@ -990,7 +1128,9 @@
         <tr>
           <td>83</td>
           <td>farfetchd</td>
-          <td>normal, flying</td>
+          <td> <span class="normal poketype">normal</span>
+            <span class="flying poketype">flying</span>
+          </td>
           <td>60</td>
           <td>52</td>
           <td>132</td>
@@ -1001,7 +1141,9 @@
         <tr>
           <td>84</td>
           <td>doduo</td>
-          <td>normal, flying</td>
+          <td> <span class="normal poketype">normal</span>
+            <span class="flying poketype">flying</span>
+          </td>
           <td>75</td>
           <td>35</td>
           <td>62</td>
@@ -1012,7 +1154,9 @@
         <tr>
           <td>85</td>
           <td>dodrio</td>
-          <td>normal, flying</td>
+          <td> <span class="normal poketype">normal</span>
+            <span class="flying poketype">flying</span>
+          </td>
           <td>110</td>
           <td>60</td>
           <td>165</td>
@@ -1023,7 +1167,7 @@
         <tr>
           <td>86</td>
           <td>seel</td>
-          <td>water</td>
+          <td><span class="water poketype">water</span></td>
           <td>45</td>
           <td>65</td>
           <td>65</td>
@@ -1034,7 +1178,7 @@
         <tr>
           <td>87</td>
           <td>dewgong</td>
-          <td>water, ice</td>
+          <td><span class="water poketype">water</span> <span class="ice poketype">ice</span></td>
           <td>70</td>
           <td>90</td>
           <td>166</td>
@@ -1045,7 +1189,7 @@
         <tr>
           <td>88</td>
           <td>grimer</td>
-          <td>poison</td>
+          <td><span class="poison poketype">poison</span></td>
           <td>25</td>
           <td>80</td>
           <td>65</td>
@@ -1056,7 +1200,7 @@
         <tr>
           <td>89</td>
           <td>muk</td>
-          <td>poison</td>
+          <td><span class="poison poketype">poison</span></td>
           <td>50</td>
           <td>105</td>
           <td>175</td>
@@ -1067,7 +1211,7 @@
         <tr>
           <td>90</td>
           <td>shellder</td>
-          <td>water</td>
+          <td><span class="water poketype">water</span></td>
           <td>40</td>
           <td>30</td>
           <td>61</td>
@@ -1078,7 +1222,7 @@
         <tr>
           <td>91</td>
           <td>cloyster</td>
-          <td>water, ice</td>
+          <td><span class="water poketype">water</span> <span class="ice poketype">ice</span></td>
           <td>70</td>
           <td>50</td>
           <td>184</td>
@@ -1089,7 +1233,7 @@
         <tr>
           <td>92</td>
           <td>gastly</td>
-          <td>ghost, poison</td>
+          <td><span class="ghost poketype">ghost</span> <span class="poison poketype">poison</span></td>
           <td>80</td>
           <td>30</td>
           <td>62</td>
@@ -1100,7 +1244,7 @@
         <tr>
           <td>93</td>
           <td>haunter</td>
-          <td>ghost, poison</td>
+          <td><span class="ghost poketype">ghost</span> <span class="poison poketype">poison</span></td>
           <td>95</td>
           <td>45</td>
           <td>142</td>
@@ -1111,7 +1255,7 @@
         <tr>
           <td>94</td>
           <td>gengar</td>
-          <td>ghost, poison</td>
+          <td><span class="ghost poketype">ghost</span> <span class="poison poketype">poison</span></td>
           <td>110</td>
           <td>60</td>
           <td>225</td>
@@ -1122,7 +1266,7 @@
         <tr>
           <td>95</td>
           <td>onix</td>
-          <td>rock, ground</td>
+          <td><span class="rock poketype">rock</span> <span class="ground poketype">ground</span></td>
           <td>70</td>
           <td>35</td>
           <td>77</td>
@@ -1133,7 +1277,7 @@
         <tr>
           <td>96</td>
           <td>drowzee</td>
-          <td>psychic</td>
+          <td><span class="psychic poketype">psychic</span></td>
           <td>42</td>
           <td>60</td>
           <td>66</td>
@@ -1144,7 +1288,7 @@
         <tr>
           <td>97</td>
           <td>hypno</td>
-          <td>psychic</td>
+          <td><span class="psychic poketype">psychic</span></td>
           <td>67</td>
           <td>85</td>
           <td>169</td>
@@ -1155,7 +1299,7 @@
         <tr>
           <td>98</td>
           <td>krabby</td>
-          <td>water</td>
+          <td><span class="water poketype">water</span></td>
           <td>50</td>
           <td>30</td>
           <td>65</td>
@@ -1166,7 +1310,7 @@
         <tr>
           <td>99</td>
           <td>kingler</td>
-          <td>water</td>
+          <td><span class="water poketype">water</span></td>
           <td>75</td>
           <td>55</td>
           <td>166</td>
@@ -1177,7 +1321,7 @@
         <tr>
           <td>100</td>
           <td>voltorb</td>
-          <td>electric</td>
+          <td><span class="electric poketype">electric</span></td>
           <td>100</td>
           <td>40</td>
           <td>66</td>
@@ -1188,7 +1332,7 @@
         <tr>
           <td>101</td>
           <td>electrode</td>
-          <td>electric</td>
+          <td><span class="electric poketype">electric</span></td>
           <td>150</td>
           <td>60</td>
           <td>172</td>
@@ -1199,7 +1343,9 @@
         <tr>
           <td>102</td>
           <td>exeggcute</td>
-          <td>grass, psychic</td>
+          <td> <span class="grass poketype">grass</span>
+            <span class="psychic poketype">psychic</span>
+          </td>
           <td>40</td>
           <td>60</td>
           <td>65</td>
@@ -1210,7 +1356,9 @@
         <tr>
           <td>103</td>
           <td>exeggutor</td>
-          <td>grass, psychic</td>
+          <td> <span class="grass poketype">grass</span>
+            <span class="psychic poketype">psychic</span>
+          </td>
           <td>55</td>
           <td>95</td>
           <td>186</td>
@@ -1221,7 +1369,7 @@
         <tr>
           <td>104</td>
           <td>cubone</td>
-          <td>ground</td>
+          <td><span class="ground poketype">ground</span></td>
           <td>35</td>
           <td>50</td>
           <td>64</td>
@@ -1232,7 +1380,7 @@
         <tr>
           <td>105</td>
           <td>marowak</td>
-          <td>ground</td>
+          <td><span class="ground poketype">ground</span></td>
           <td>45</td>
           <td>60</td>
           <td>149</td>
@@ -1243,7 +1391,7 @@
         <tr>
           <td>106</td>
           <td>hitmonlee</td>
-          <td>fighting</td>
+          <td><span class="fighting poketype">fighting</span></td>
           <td>87</td>
           <td>50</td>
           <td>159</td>
@@ -1254,7 +1402,7 @@
         <tr>
           <td>107</td>
           <td>hitmonchan</td>
-          <td>fighting</td>
+          <td><span class="fighting poketype">fighting</span></td>
           <td>76</td>
           <td>50</td>
           <td>159</td>
@@ -1265,7 +1413,8 @@
         <tr>
           <td>108</td>
           <td>lickitung</td>
-          <td>normal</td>
+          <td> <span class="normal poketype">normal</span>
+          </td>
           <td>30</td>
           <td>90</td>
           <td>77</td>
@@ -1276,7 +1425,7 @@
         <tr>
           <td>109</td>
           <td>koffing</td>
-          <td>poison</td>
+          <td><span class="poison poketype">poison</span></td>
           <td>35</td>
           <td>40</td>
           <td>68</td>
@@ -1287,7 +1436,7 @@
         <tr>
           <td>110</td>
           <td>weezing</td>
-          <td>poison</td>
+          <td><span class="poison poketype">poison</span></td>
           <td>60</td>
           <td>65</td>
           <td>172</td>
@@ -1298,7 +1447,7 @@
         <tr>
           <td>111</td>
           <td>rhyhorn</td>
-          <td>ground, rock</td>
+          <td><span class="ground poketype">ground</span> <span class="rock poketype">rock</span></td>
           <td>25</td>
           <td>80</td>
           <td>69</td>
@@ -1309,7 +1458,7 @@
         <tr>
           <td>112</td>
           <td>rhydon</td>
-          <td>ground, rock</td>
+          <td><span class="ground poketype">ground</span> <span class="rock poketype">rock</span></td>
           <td>40</td>
           <td>105</td>
           <td>170</td>
@@ -1320,7 +1469,8 @@
         <tr>
           <td>113</td>
           <td>chansey</td>
-          <td>normal</td>
+          <td> <span class="normal poketype">normal</span>
+          </td>
           <td>50</td>
           <td>250</td>
           <td>395</td>
@@ -1331,7 +1481,8 @@
         <tr>
           <td>114</td>
           <td>tangela</td>
-          <td>grass</td>
+          <td> <span class="grass poketype">grass</span>
+          </td>
           <td>60</td>
           <td>65</td>
           <td>87</td>
@@ -1342,7 +1493,8 @@
         <tr>
           <td>115</td>
           <td>kangaskhan</td>
-          <td>normal</td>
+          <td> <span class="normal poketype">normal</span>
+          </td>
           <td>90</td>
           <td>105</td>
           <td>172</td>
@@ -1353,7 +1505,7 @@
         <tr>
           <td>116</td>
           <td>horsea</td>
-          <td>water</td>
+          <td><span class="water poketype">water</span></td>
           <td>60</td>
           <td>30</td>
           <td>59</td>
@@ -1364,7 +1516,7 @@
         <tr>
           <td>117</td>
           <td>seadra</td>
-          <td>water</td>
+          <td><span class="water poketype">water</span></td>
           <td>85</td>
           <td>55</td>
           <td>154</td>
@@ -1375,7 +1527,7 @@
         <tr>
           <td>118</td>
           <td>goldeen</td>
-          <td>water</td>
+          <td><span class="water poketype">water</span></td>
           <td>63</td>
           <td>45</td>
           <td>64</td>
@@ -1386,7 +1538,7 @@
         <tr>
           <td>119</td>
           <td>seaking</td>
-          <td>water</td>
+          <td><span class="water poketype">water</span></td>
           <td>68</td>
           <td>80</td>
           <td>158</td>
@@ -1397,7 +1549,7 @@
         <tr>
           <td>120</td>
           <td>staryu</td>
-          <td>water</td>
+          <td><span class="water poketype">water</span></td>
           <td>85</td>
           <td>30</td>
           <td>68</td>
@@ -1408,7 +1560,7 @@
         <tr>
           <td>121</td>
           <td>starmie</td>
-          <td>water, psychic</td>
+          <td><span class="water poketype">water</span> <span class="psychic poketype">psychic</span></td>
           <td>115</td>
           <td>60</td>
           <td>182</td>
@@ -1419,7 +1571,7 @@
         <tr>
           <td>122</td>
           <td>mr-mime</td>
-          <td>psychic, fairy</td>
+          <td><span class="psychic poketype">psychic</span> <span class="fairy poketype">fairy</span></td>
           <td>90</td>
           <td>40</td>
           <td>161</td>
@@ -1430,7 +1582,7 @@
         <tr>
           <td>123</td>
           <td>scyther</td>
-          <td>bug, flying</td>
+          <td><span class="bug poketype">bug</span> <span class="flying poketype">flying</span></td>
           <td>105</td>
           <td>70</td>
           <td>100</td>
@@ -1441,7 +1593,7 @@
         <tr>
           <td>124</td>
           <td>jynx</td>
-          <td>ice, psychic</td>
+          <td><span class="ice poketype">ice</span> <span class="psychic poketype">psychic</span></td>
           <td>95</td>
           <td>65</td>
           <td>159</td>
@@ -1452,7 +1604,7 @@
         <tr>
           <td>125</td>
           <td>electabuzz</td>
-          <td>electric</td>
+          <td><span class="electric poketype">electric</span></td>
           <td>105</td>
           <td>65</td>
           <td>172</td>
@@ -1463,7 +1615,7 @@
         <tr>
           <td>126</td>
           <td>magmar</td>
-          <td>fire</td>
+          <td><span class="fire poketype">fire</span></td>
           <td>93</td>
           <td>65</td>
           <td>173</td>
@@ -1474,7 +1626,7 @@
         <tr>
           <td>127</td>
           <td>pinsir</td>
-          <td>bug</td>
+          <td><span class="bug poketype">bug</span></td>
           <td>85</td>
           <td>65</td>
           <td>175</td>
@@ -1485,7 +1637,8 @@
         <tr>
           <td>128</td>
           <td>tauros</td>
-          <td>normal</td>
+          <td> <span class="normal poketype">normal</span>
+          </td>
           <td>110</td>
           <td>75</td>
           <td>172</td>
@@ -1496,7 +1649,7 @@
         <tr>
           <td>129</td>
           <td>magikarp</td>
-          <td>water</td>
+          <td><span class="water poketype">water</span></td>
           <td>80</td>
           <td>20</td>
           <td>40</td>
@@ -1507,7 +1660,7 @@
         <tr>
           <td>130</td>
           <td>gyarados</td>
-          <td>water, flying</td>
+          <td><span class="water poketype">water</span> <span class="flying poketype">flying</span></td>
           <td>81</td>
           <td>95</td>
           <td>189</td>
@@ -1518,7 +1671,7 @@
         <tr>
           <td>131</td>
           <td>lapras</td>
-          <td>water, ice</td>
+          <td><span class="water poketype">water</span> <span class="ice poketype">ice</span></td>
           <td>60</td>
           <td>130</td>
           <td>187</td>
@@ -1529,7 +1682,8 @@
         <tr>
           <td>132</td>
           <td>ditto</td>
-          <td>normal</td>
+          <td> <span class="normal poketype">normal</span>
+          </td>
           <td>48</td>
           <td>48</td>
           <td>101</td>
@@ -1540,7 +1694,8 @@
         <tr>
           <td>133</td>
           <td>eevee</td>
-          <td>normal</td>
+          <td> <span class="normal poketype">normal</span>
+          </td>
           <td>55</td>
           <td>55</td>
           <td>65</td>
@@ -1551,7 +1706,7 @@
         <tr>
           <td>134</td>
           <td>vaporeon</td>
-          <td>water</td>
+          <td><span class="water poketype">water</span></td>
           <td>65</td>
           <td>130</td>
           <td>184</td>
@@ -1562,7 +1717,7 @@
         <tr>
           <td>135</td>
           <td>jolteon</td>
-          <td>electric</td>
+          <td><span class="electric poketype">electric</span></td>
           <td>130</td>
           <td>65</td>
           <td>184</td>
@@ -1573,7 +1728,7 @@
         <tr>
           <td>136</td>
           <td>flareon</td>
-          <td>fire</td>
+          <td><span class="fire poketype">fire</span></td>
           <td>65</td>
           <td>65</td>
           <td>184</td>
@@ -1584,7 +1739,8 @@
         <tr>
           <td>137</td>
           <td>porygon</td>
-          <td>normal</td>
+          <td> <span class="normal poketype">normal</span>
+          </td>
           <td>40</td>
           <td>65</td>
           <td>79</td>
@@ -1595,7 +1751,7 @@
         <tr>
           <td>138</td>
           <td>omanyte</td>
-          <td>rock, water</td>
+          <td><span class="rock poketype">rock</span> <span class="water poketype">water</span></td>
           <td>35</td>
           <td>35</td>
           <td>71</td>
@@ -1606,7 +1762,7 @@
         <tr>
           <td>139</td>
           <td>omastar</td>
-          <td>rock, water</td>
+          <td><span class="rock poketype">rock</span> <span class="water poketype">water</span></td>
           <td>55</td>
           <td>70</td>
           <td>173</td>
@@ -1617,7 +1773,7 @@
         <tr>
           <td>140</td>
           <td>kabuto</td>
-          <td>rock, water</td>
+          <td><span class="rock poketype">rock</span> <span class="water poketype">water</span></td>
           <td>55</td>
           <td>30</td>
           <td>71</td>
@@ -1628,7 +1784,7 @@
         <tr>
           <td>141</td>
           <td>kabutops</td>
-          <td>rock, water</td>
+          <td><span class="rock poketype">rock</span> <span class="water poketype">water</span></td>
           <td>80</td>
           <td>60</td>
           <td>173</td>
@@ -1639,7 +1795,7 @@
         <tr>
           <td>142</td>
           <td>aerodactyl</td>
-          <td>rock, flying</td>
+          <td><span class="rock poketype">rock</span> <span class="flying poketype">flying</span></td>
           <td>130</td>
           <td>80</td>
           <td>180</td>
@@ -1650,7 +1806,8 @@
         <tr>
           <td>143</td>
           <td>snorlax</td>
-          <td>normal</td>
+          <td> <span class="normal poketype">normal</span>
+          </td>
           <td>30</td>
           <td>160</td>
           <td>189</td>
@@ -1661,7 +1818,7 @@
         <tr>
           <td>144</td>
           <td>articuno</td>
-          <td>ice, flying</td>
+          <td><span class="ice poketype">ice</span> <span class="flying poketype">flying</span></td>
           <td>85</td>
           <td>90</td>
           <td>261</td>
@@ -1672,7 +1829,7 @@
         <tr>
           <td>145</td>
           <td>zapdos</td>
-          <td>electric, flying</td>
+          <td><span class="electric poketype">electric</span> <span class="flying poketype">flying</span></td>
           <td>100</td>
           <td>90</td>
           <td>261</td>
@@ -1683,7 +1840,7 @@
         <tr>
           <td>146</td>
           <td>moltres</td>
-          <td>fire, flying</td>
+          <td><span class="fire poketype">fire</span> <span class="flying poketype">flying</span></td>
           <td>90</td>
           <td>90</td>
           <td>261</td>
@@ -1694,7 +1851,7 @@
         <tr>
           <td>147</td>
           <td>dratini</td>
-          <td>dragon</td>
+          <td><span class="dragon poketype">dragon</span></td>
           <td>50</td>
           <td>41</td>
           <td>60</td>
@@ -1705,7 +1862,7 @@
         <tr>
           <td>148</td>
           <td>dragonair</td>
-          <td>dragon</td>
+          <td><span class="dragon poketype">dragon</span></td>
           <td>70</td>
           <td>61</td>
           <td>147</td>
@@ -1716,7 +1873,7 @@
         <tr>
           <td>149</td>
           <td>dragonite</td>
-          <td>dragon, flying</td>
+          <td><span class="dragon poketype">dragon</span> <span class="flying poketype">flying</span></td>
           <td>80</td>
           <td>91</td>
           <td>270</td>
@@ -1727,7 +1884,7 @@
         <tr>
           <td>150</td>
           <td>mewtwo</td>
-          <td>psychic</td>
+          <td><span class="psychic poketype">psychic</span></td>
           <td>130</td>
           <td>106</td>
           <td>306</td>
@@ -1738,7 +1895,7 @@
         <tr>
           <td>151</td>
           <td>mew</td>
-          <td>psychic</td>
+          <td><span class="psychic poketype">psychic</span></td>
           <td>100</td>
           <td>100</td>
           <td>270</td>
@@ -1749,7 +1906,8 @@
         <tr>
           <td>152</td>
           <td>chikorita</td>
-          <td>grass</td>
+          <td> <span class="grass poketype">grass</span>
+          </td>
           <td>45</td>
           <td>45</td>
           <td>64</td>
@@ -1760,7 +1918,8 @@
         <tr>
           <td>153</td>
           <td>bayleef</td>
-          <td>grass</td>
+          <td> <span class="grass poketype">grass</span>
+          </td>
           <td>60</td>
           <td>60</td>
           <td>142</td>
@@ -1771,7 +1930,8 @@
         <tr>
           <td>154</td>
           <td>meganium</td>
-          <td>grass</td>
+          <td> <span class="grass poketype">grass</span>
+          </td>
           <td>80</td>
           <td>80</td>
           <td>236</td>
@@ -1782,7 +1942,7 @@
         <tr>
           <td>155</td>
           <td>cyndaquil</td>
-          <td>fire</td>
+          <td><span class="fire poketype">fire</span></td>
           <td>65</td>
           <td>39</td>
           <td>62</td>
@@ -1793,7 +1953,7 @@
         <tr>
           <td>156</td>
           <td>quilava</td>
-          <td>fire</td>
+          <td><span class="fire poketype">fire</span></td>
           <td>80</td>
           <td>58</td>
           <td>142</td>
@@ -1804,7 +1964,7 @@
         <tr>
           <td>157</td>
           <td>typhlosion</td>
-          <td>fire</td>
+          <td><span class="fire poketype">fire</span></td>
           <td>100</td>
           <td>78</td>
           <td>240</td>
@@ -1815,7 +1975,7 @@
         <tr>
           <td>158</td>
           <td>totodile</td>
-          <td>water</td>
+          <td><span class="water poketype">water</span></td>
           <td>43</td>
           <td>50</td>
           <td>63</td>
@@ -1826,7 +1986,7 @@
         <tr>
           <td>159</td>
           <td>croconaw</td>
-          <td>water</td>
+          <td><span class="water poketype">water</span></td>
           <td>58</td>
           <td>65</td>
           <td>142</td>
@@ -1837,7 +1997,7 @@
         <tr>
           <td>160</td>
           <td>feraligatr</td>
-          <td>water</td>
+          <td><span class="water poketype">water</span></td>
           <td>78</td>
           <td>85</td>
           <td>239</td>
@@ -1848,7 +2008,8 @@
         <tr>
           <td>161</td>
           <td>sentret</td>
-          <td>normal</td>
+          <td> <span class="normal poketype">normal</span>
+          </td>
           <td>20</td>
           <td>35</td>
           <td>43</td>
@@ -1859,7 +2020,8 @@
         <tr>
           <td>162</td>
           <td>furret</td>
-          <td>normal</td>
+          <td> <span class="normal poketype">normal</span>
+          </td>
           <td>90</td>
           <td>85</td>
           <td>145</td>
@@ -1870,7 +2032,9 @@
         <tr>
           <td>163</td>
           <td>hoothoot</td>
-          <td>normal, flying</td>
+          <td> <span class="normal poketype">normal</span>
+            <span class="flying poketype">flying</span>
+          </td>
           <td>50</td>
           <td>60</td>
           <td>52</td>
@@ -1881,7 +2045,9 @@
         <tr>
           <td>164</td>
           <td>noctowl</td>
-          <td>normal, flying</td>
+          <td> <span class="normal poketype">normal</span>
+            <span class="flying poketype">flying</span>
+          </td>
           <td>70</td>
           <td>100</td>
           <td>158</td>
@@ -1892,7 +2058,7 @@
         <tr>
           <td>165</td>
           <td>ledyba</td>
-          <td>bug, flying</td>
+          <td><span class="bug poketype">bug</span> <span class="flying poketype">flying</span></td>
           <td>55</td>
           <td>40</td>
           <td>53</td>
@@ -1903,7 +2069,7 @@
         <tr>
           <td>166</td>
           <td>ledian</td>
-          <td>bug, flying</td>
+          <td><span class="bug poketype">bug</span> <span class="flying poketype">flying</span></td>
           <td>85</td>
           <td>55</td>
           <td>137</td>
@@ -1914,7 +2080,7 @@
         <tr>
           <td>167</td>
           <td>spinarak</td>
-          <td>bug, poison</td>
+          <td><span class="bug poketype">bug</span> <span class="poison poketype">poison</span></td>
           <td>30</td>
           <td>40</td>
           <td>50</td>
@@ -1925,7 +2091,7 @@
         <tr>
           <td>168</td>
           <td>ariados</td>
-          <td>bug, poison</td>
+          <td><span class="bug poketype">bug</span> <span class="poison poketype">poison</span></td>
           <td>40</td>
           <td>70</td>
           <td>140</td>
@@ -1936,7 +2102,7 @@
         <tr>
           <td>169</td>
           <td>crobat</td>
-          <td>poison, flying</td>
+          <td><span class="poison poketype">poison</span> <span class="flying poketype">flying</span></td>
           <td>130</td>
           <td>85</td>
           <td>241</td>
@@ -1947,7 +2113,7 @@
         <tr>
           <td>170</td>
           <td>chinchou</td>
-          <td>water, electric</td>
+          <td><span class="water poketype">water</span> <span class="electric poketype">electric</span></td>
           <td>67</td>
           <td>75</td>
           <td>66</td>
@@ -1958,7 +2124,7 @@
         <tr>
           <td>171</td>
           <td>lanturn</td>
-          <td>water, electric</td>
+          <td><span class="water poketype">water</span> <span class="electric poketype">electric</span></td>
           <td>67</td>
           <td>125</td>
           <td>161</td>
@@ -1969,7 +2135,7 @@
         <tr>
           <td>172</td>
           <td>pichu</td>
-          <td>electric</td>
+          <td><span class="electric poketype">electric</span></td>
           <td>60</td>
           <td>20</td>
           <td>41</td>
@@ -1980,7 +2146,7 @@
         <tr>
           <td>173</td>
           <td>cleffa</td>
-          <td>fairy</td>
+          <td><span class="fairy poketype">fairy</span></td>
           <td>15</td>
           <td>50</td>
           <td>44</td>
@@ -1991,7 +2157,9 @@
         <tr>
           <td>174</td>
           <td>igglybuff</td>
-          <td>normal, fairy</td>
+          <td> <span class="normal poketype">normal</span>
+            <span class="fairy poketype">fairy</span>
+          </td>
           <td>15</td>
           <td>90</td>
           <td>42</td>
@@ -2002,7 +2170,7 @@
         <tr>
           <td>175</td>
           <td>togepi</td>
-          <td>fairy</td>
+          <td><span class="fairy poketype">fairy</span></td>
           <td>20</td>
           <td>35</td>
           <td>49</td>
@@ -2013,7 +2181,7 @@
         <tr>
           <td>176</td>
           <td>togetic</td>
-          <td>fairy, flying</td>
+          <td><span class="fairy poketype">fairy</span> <span class="flying poketype">flying</span></td>
           <td>40</td>
           <td>55</td>
           <td>142</td>
@@ -2024,7 +2192,7 @@
         <tr>
           <td>177</td>
           <td>natu</td>
-          <td>psychic, flying</td>
+          <td><span class="psychic poketype">psychic</span> <span class="flying poketype">flying</span></td>
           <td>70</td>
           <td>40</td>
           <td>64</td>
@@ -2035,7 +2203,7 @@
         <tr>
           <td>178</td>
           <td>xatu</td>
-          <td>psychic, flying</td>
+          <td><span class="psychic poketype">psychic</span> <span class="flying poketype">flying</span></td>
           <td>95</td>
           <td>65</td>
           <td>165</td>
@@ -2046,7 +2214,7 @@
         <tr>
           <td>179</td>
           <td>mareep</td>
-          <td>electric</td>
+          <td><span class="electric poketype">electric</span></td>
           <td>35</td>
           <td>55</td>
           <td>56</td>
@@ -2057,7 +2225,7 @@
         <tr>
           <td>180</td>
           <td>flaaffy</td>
-          <td>electric</td>
+          <td><span class="electric poketype">electric</span></td>
           <td>45</td>
           <td>70</td>
           <td>128</td>
@@ -2068,7 +2236,7 @@
         <tr>
           <td>181</td>
           <td>ampharos</td>
-          <td>electric</td>
+          <td><span class="electric poketype">electric</span></td>
           <td>55</td>
           <td>90</td>
           <td>230</td>
@@ -2079,7 +2247,8 @@
         <tr>
           <td>182</td>
           <td>bellossom</td>
-          <td>grass</td>
+          <td> <span class="grass poketype">grass</span>
+          </td>
           <td>50</td>
           <td>75</td>
           <td>221</td>
@@ -2090,7 +2259,7 @@
         <tr>
           <td>183</td>
           <td>marill</td>
-          <td>water, fairy</td>
+          <td><span class="water poketype">water</span> <span class="fairy poketype">fairy</span></td>
           <td>40</td>
           <td>70</td>
           <td>88</td>
@@ -2101,7 +2270,7 @@
         <tr>
           <td>184</td>
           <td>azumarill</td>
-          <td>water, fairy</td>
+          <td><span class="water poketype">water</span> <span class="fairy poketype">fairy</span></td>
           <td>50</td>
           <td>100</td>
           <td>189</td>
@@ -2112,7 +2281,7 @@
         <tr>
           <td>185</td>
           <td>sudowoodo</td>
-          <td>rock</td>
+          <td><span class="rock poketype">rock</span></td>
           <td>30</td>
           <td>70</td>
           <td>144</td>
@@ -2123,7 +2292,7 @@
         <tr>
           <td>186</td>
           <td>politoed</td>
-          <td>water</td>
+          <td><span class="water poketype">water</span></td>
           <td>70</td>
           <td>90</td>
           <td>225</td>
@@ -2134,7 +2303,9 @@
         <tr>
           <td>187</td>
           <td>hoppip</td>
-          <td>grass, flying</td>
+          <td> <span class="grass poketype">grass</span>
+            <span class="flying poketype">flying</span>
+          </td>
           <td>50</td>
           <td>35</td>
           <td>50</td>
@@ -2145,7 +2316,9 @@
         <tr>
           <td>188</td>
           <td>skiploom</td>
-          <td>grass, flying</td>
+          <td> <span class="grass poketype">grass</span>
+            <span class="flying poketype">flying</span>
+          </td>
           <td>80</td>
           <td>55</td>
           <td>119</td>
@@ -2156,7 +2329,9 @@
         <tr>
           <td>189</td>
           <td>jumpluff</td>
-          <td>grass, flying</td>
+          <td> <span class="grass poketype">grass</span>
+            <span class="flying poketype">flying</span>
+          </td>
           <td>110</td>
           <td>75</td>
           <td>207</td>
@@ -2167,7 +2342,8 @@
         <tr>
           <td>190</td>
           <td>aipom</td>
-          <td>normal</td>
+          <td> <span class="normal poketype">normal</span>
+          </td>
           <td>85</td>
           <td>55</td>
           <td>72</td>
@@ -2178,7 +2354,8 @@
         <tr>
           <td>191</td>
           <td>sunkern</td>
-          <td>grass</td>
+          <td> <span class="grass poketype">grass</span>
+          </td>
           <td>30</td>
           <td>30</td>
           <td>36</td>
@@ -2189,7 +2366,8 @@
         <tr>
           <td>192</td>
           <td>sunflora</td>
-          <td>grass</td>
+          <td> <span class="grass poketype">grass</span>
+          </td>
           <td>30</td>
           <td>75</td>
           <td>149</td>
@@ -2200,7 +2378,7 @@
         <tr>
           <td>193</td>
           <td>yanma</td>
-          <td>bug, flying</td>
+          <td><span class="bug poketype">bug</span> <span class="flying poketype">flying</span></td>
           <td>95</td>
           <td>65</td>
           <td>78</td>
@@ -2211,7 +2389,7 @@
         <tr>
           <td>194</td>
           <td>wooper</td>
-          <td>water, ground</td>
+          <td><span class="water poketype">water</span> <span class="ground poketype">ground</span></td>
           <td>15</td>
           <td>55</td>
           <td>42</td>
@@ -2222,7 +2400,7 @@
         <tr>
           <td>195</td>
           <td>quagsire</td>
-          <td>water, ground</td>
+          <td><span class="water poketype">water</span> <span class="ground poketype">ground</span></td>
           <td>35</td>
           <td>95</td>
           <td>151</td>
@@ -2233,7 +2411,7 @@
         <tr>
           <td>196</td>
           <td>espeon</td>
-          <td>psychic</td>
+          <td><span class="psychic poketype">psychic</span></td>
           <td>110</td>
           <td>65</td>
           <td>184</td>
@@ -2244,7 +2422,7 @@
         <tr>
           <td>197</td>
           <td>umbreon</td>
-          <td>dark</td>
+          <td><span class="dark poketype">dark</span></td>
           <td>65</td>
           <td>95</td>
           <td>184</td>
@@ -2255,7 +2433,7 @@
         <tr>
           <td>198</td>
           <td>murkrow</td>
-          <td>dark, flying</td>
+          <td><span class="dark poketype">dark</span> <span class="flying poketype">flying</span></td>
           <td>91</td>
           <td>60</td>
           <td>81</td>
@@ -2266,7 +2444,7 @@
         <tr>
           <td>199</td>
           <td>slowking</td>
-          <td>water, psychic</td>
+          <td><span class="water poketype">water</span> <span class="psychic poketype">psychic</span></td>
           <td>30</td>
           <td>95</td>
           <td>172</td>
