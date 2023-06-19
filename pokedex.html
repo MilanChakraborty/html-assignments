@@ -1,4 +1,4 @@
-<html>
+<html>  
 
 <head>
   <title>
@@ -9,7 +9,8 @@
   body {
     font-size: 16px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: hsl(48, 100%, 54%);
+    background-color: hsl(48, 100%, 65%);
+    margin: 0%;
   }
 
   .page {
@@ -22,12 +23,11 @@
   .logo {
     width: 25em;
     height: 15em;
-    margin-top: 1.5em;
   }
 
   .cards {
     display: table;
-    margin: auto;
+    margin: 0 auto;
     border-spacing: 1em;
   }
 
@@ -40,14 +40,16 @@
     border: 0.2em solid rgb(30, 70, 128);
     border-radius: 3%;
     background-color: hsl(213, 57%, 65%);
-    /* background-color: rgb(182, 215, 228); */
     height: 25em;
     width: 15em;
   }
 
-  .pokemon-avatar {
-    background-color: hsl(213, 57%, 80%);
-    /* background-color: rgb(219, 235, 241); */
+  .card:hover {
+    background-color: hsl(213, 57%, 50%);
+  }
+
+  .pokemon-avatar-container {
+    background-color: hsl(213, 57%, 83%);
     border: 0.1em solid hsl(213, 57%, 50%);
     margin: 1em;
     width: 13em;
@@ -57,6 +59,9 @@
   .poke-name {
     margin: 0em;
     font-weight: 600;
+    padding: 0.2em 0em;
+    background-color: hsl(213, 57%, 50%);
+    width: 100%;
   }
 
   .poke-details {
@@ -64,34 +69,44 @@
     font-size: 0.9em;
     padding: 0.6em;
   }
-  
+
   .poke-details th {
     font-weight: 500;
     text-align: left;
   }
-  
+
   .poke-details td {
     font-weight: 300;
     text-align: right;
   }
+
+  .poketype {
+      padding: 0.15em;
+      border-radius: 10%;
+    }
+
+  .grass {
+    background-color: rgb(119, 181, 81);
+    color: white;
+  }
+  
 </style>
 
 <body>
   <main class="page">
     <header>
-      <!-- <p>Pokedex</p> -->
       <img class="logo"
         src="https://raw.githubusercontent.com/sleduardo20/pokedex/0671af442dff1d8f7141e49eb83b438885bbc9e9/public/img/logo.svg">
     </header>
     <section class="cards">
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Bulbasaur</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">grass, poison</td>
+              <td class="values">grass poison</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -116,12 +131,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Ivysaur</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">grass, poison</td>
+              <td class="values">grass poison</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -146,12 +161,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Venusaur</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">grass, poison</td>
+              <td class="values">grass poison</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -176,7 +191,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Charmander</p>
           <table class="poke-details">
             <tr>
@@ -206,7 +221,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Charmeleon</p>
           <table class="poke-details">
             <tr>
@@ -238,12 +253,12 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Rizard</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">fire, flying</td>
+              <td class="values">fire flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -268,7 +283,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Irtle</p>
           <table class="poke-details">
             <tr>
@@ -298,7 +313,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Tortle</p>
           <table class="poke-details">
             <tr>
@@ -328,7 +343,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Stoise</p>
           <table class="poke-details">
             <tr>
@@ -358,7 +373,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Caterpie</p>
           <table class="poke-details">
             <tr>
@@ -390,7 +405,7 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Metapod</p>
           <table class="poke-details">
             <tr>
@@ -420,12 +435,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Butterfree</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">bug, flying</td>
+              <td class="values">bug flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -450,12 +465,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Weedle</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">bug, poison</td>
+              <td class="values">bug poison</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -480,12 +495,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Kakuna</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">bug, poison</td>
+              <td class="values">bug poison</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -510,12 +525,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Beedrill</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">bug, poison</td>
+              <td class="values">bug poison</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -542,12 +557,12 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Pidgey</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">normal, flying</td>
+              <td class="values">normal flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -572,12 +587,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Pidgeotto</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">normal, flying</td>
+              <td class="values">normal flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -602,12 +617,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Pidgeot</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">normal, flying</td>
+              <td class="values">normal flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -632,7 +647,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Rattata</p>
           <table class="poke-details">
             <tr>
@@ -662,7 +677,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Raticate</p>
           <table class="poke-details">
             <tr>
@@ -694,12 +709,12 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Spearow</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">normal, flying</td>
+              <td class="values">normal flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -724,12 +739,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Fearow</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">normal, flying</td>
+              <td class="values">normal flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -754,7 +769,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Ekans</p>
           <table class="poke-details">
             <tr>
@@ -784,7 +799,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Arbok</p>
           <table class="poke-details">
             <tr>
@@ -814,7 +829,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Pikachu</p>
           <table class="poke-details">
             <tr>
@@ -846,7 +861,7 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Raichu</p>
           <table class="poke-details">
             <tr>
@@ -876,7 +891,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Sandshrew</p>
           <table class="poke-details">
             <tr>
@@ -906,7 +921,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Sandslash</p>
           <table class="poke-details">
             <tr>
@@ -936,7 +951,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Nidoran-f</p>
           <table class="poke-details">
             <tr>
@@ -966,7 +981,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Nidorina</p>
           <table class="poke-details">
             <tr>
@@ -998,12 +1013,12 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Nidoqueen</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">poison, ground</td>
+              <td class="values">poison ground</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -1028,7 +1043,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Nidoran-m</p>
           <table class="poke-details">
             <tr>
@@ -1058,7 +1073,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Nidorino</p>
           <table class="poke-details">
             <tr>
@@ -1088,12 +1103,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Nidoking</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">poison, ground</td>
+              <td class="values">poison ground</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -1118,7 +1133,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Clefairy</p>
           <table class="poke-details">
             <tr>
@@ -1150,7 +1165,7 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Clefable</p>
           <table class="poke-details">
             <tr>
@@ -1180,7 +1195,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Vulpix</p>
           <table class="poke-details">
             <tr>
@@ -1210,7 +1225,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Ninetales</p>
           <table class="poke-details">
             <tr>
@@ -1240,12 +1255,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Jigglypuff</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">normal, fairy</td>
+              <td class="values">normal fairy</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -1270,12 +1285,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Wigglytuff</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">normal, fairy</td>
+              <td class="values">normal fairy</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -1302,12 +1317,12 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Zubat</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">poison, flying</td>
+              <td class="values">poison flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -1332,12 +1347,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Golbat</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">poison, flying</td>
+              <td class="values">poison flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -1362,12 +1377,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Oddish</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">grass, poison</td>
+              <td class="values">grass poison</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -1392,12 +1407,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Gloom</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">grass, poison</td>
+              <td class="values">grass poison</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -1422,12 +1437,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Vileplume</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">grass, poison</td>
+              <td class="values">grass poison</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -1454,12 +1469,12 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Paras</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">bug, grass</td>
+              <td class="values">bug grass</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -1484,12 +1499,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Parasect</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">bug, grass</td>
+              <td class="values">bug grass</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -1514,12 +1529,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Venonat</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">bug, poison</td>
+              <td class="values">bug poison</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -1544,12 +1559,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Venomoth</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">bug, poison</td>
+              <td class="values">bug poison</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -1574,7 +1589,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Diglett</p>
           <table class="poke-details">
             <tr>
@@ -1606,7 +1621,7 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Dugtrio</p>
           <table class="poke-details">
             <tr>
@@ -1636,7 +1651,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Meowth</p>
           <table class="poke-details">
             <tr>
@@ -1666,7 +1681,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Persian</p>
           <table class="poke-details">
             <tr>
@@ -1696,7 +1711,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Psyduck</p>
           <table class="poke-details">
             <tr>
@@ -1726,7 +1741,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Golduck</p>
           <table class="poke-details">
             <tr>
@@ -1758,7 +1773,7 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Mankey</p>
           <table class="poke-details">
             <tr>
@@ -1788,7 +1803,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Primeape</p>
           <table class="poke-details">
             <tr>
@@ -1818,7 +1833,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Growlithe</p>
           <table class="poke-details">
             <tr>
@@ -1848,7 +1863,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Arcanine</p>
           <table class="poke-details">
             <tr>
@@ -1878,7 +1893,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Poliwag</p>
           <table class="poke-details">
             <tr>
@@ -1910,7 +1925,7 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Poliwhirl</p>
           <table class="poke-details">
             <tr>
@@ -1940,12 +1955,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Poliwrath</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">water, fighting</td>
+              <td class="values">water fighting</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -1970,7 +1985,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Abra</p>
           <table class="poke-details">
             <tr>
@@ -2000,7 +2015,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Kadabra</p>
           <table class="poke-details">
             <tr>
@@ -2030,7 +2045,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Alakazam</p>
           <table class="poke-details">
             <tr>
@@ -2062,7 +2077,7 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Machop</p>
           <table class="poke-details">
             <tr>
@@ -2092,7 +2107,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Machoke</p>
           <table class="poke-details">
             <tr>
@@ -2122,7 +2137,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Machamp</p>
           <table class="poke-details">
             <tr>
@@ -2152,12 +2167,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Bellsprout</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">grass, poison</td>
+              <td class="values">grass poison</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -2182,12 +2197,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Weepinbell</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">grass, poison</td>
+              <td class="values">grass poison</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -2214,12 +2229,12 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Victreebel</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">grass, poison</td>
+              <td class="values">grass poison</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -2244,12 +2259,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Tentacool</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">water, poison</td>
+              <td class="values">water poison</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -2274,12 +2289,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Tentacruel</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">water, poison</td>
+              <td class="values">water poison</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -2304,12 +2319,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Geodude</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">rock, ground</td>
+              <td class="values">rock ground</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -2334,12 +2349,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Graveler</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">rock, ground</td>
+              <td class="values">rock ground</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -2366,12 +2381,12 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Golem</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">rock, ground</td>
+              <td class="values">rock ground</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -2396,7 +2411,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Ponyta</p>
           <table class="poke-details">
             <tr>
@@ -2426,7 +2441,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Rapidash</p>
           <table class="poke-details">
             <tr>
@@ -2456,12 +2471,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Slowpoke</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">water, psychic</td>
+              <td class="values">water psychic</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -2486,12 +2501,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Slowbro</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">water, psychic</td>
+              <td class="values">water psychic</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -2518,12 +2533,12 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Magnemite</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">electric, steel</td>
+              <td class="values">electric steel</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -2548,12 +2563,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Magneton</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">electric, steel</td>
+              <td class="values">electric steel</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -2578,12 +2593,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Farfetchd</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">normal, flying</td>
+              <td class="values">normal flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -2608,12 +2623,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Doduo</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">normal, flying</td>
+              <td class="values">normal flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -2638,12 +2653,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Dodrio</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">normal, flying</td>
+              <td class="values">normal flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -2670,7 +2685,7 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Seel</p>
           <table class="poke-details">
             <tr>
@@ -2700,12 +2715,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Dewgong</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">water, ice</td>
+              <td class="values">water ice</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -2730,7 +2745,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Grimer</p>
           <table class="poke-details">
             <tr>
@@ -2760,7 +2775,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Muk</p>
           <table class="poke-details">
             <tr>
@@ -2790,7 +2805,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Shellder</p>
           <table class="poke-details">
             <tr>
@@ -2822,12 +2837,12 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Cloyster</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">water, ice</td>
+              <td class="values">water ice</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -2852,12 +2867,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Gastly</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">ghost, poison</td>
+              <td class="values">ghost poison</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -2882,12 +2897,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Haunter</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">ghost, poison</td>
+              <td class="values">ghost poison</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -2912,12 +2927,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Gengar</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">ghost, poison</td>
+              <td class="values">ghost poison</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -2942,12 +2957,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Onix</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">rock, ground</td>
+              <td class="values">rock ground</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -2974,7 +2989,7 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Drowzee</p>
           <table class="poke-details">
             <tr>
@@ -3004,7 +3019,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Hypno</p>
           <table class="poke-details">
             <tr>
@@ -3034,7 +3049,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Krabby</p>
           <table class="poke-details">
             <tr>
@@ -3064,7 +3079,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Kingler</p>
           <table class="poke-details">
             <tr>
@@ -3094,7 +3109,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Voltorb</p>
           <table class="poke-details">
             <tr>
@@ -3126,7 +3141,7 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Electrode</p>
           <table class="poke-details">
             <tr>
@@ -3156,12 +3171,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Exeggcute</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">grass, psychic</td>
+              <td class="values">grass psychic</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -3186,12 +3201,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Exeggutor</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">grass, psychic</td>
+              <td class="values">grass psychic</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -3216,7 +3231,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Cubone</p>
           <table class="poke-details">
             <tr>
@@ -3246,7 +3261,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Marowak</p>
           <table class="poke-details">
             <tr>
@@ -3278,7 +3293,7 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Hitmonlee</p>
           <table class="poke-details">
             <tr>
@@ -3308,7 +3323,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Hitmonchan</p>
           <table class="poke-details">
             <tr>
@@ -3338,7 +3353,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Lickitung</p>
           <table class="poke-details">
             <tr>
@@ -3368,7 +3383,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Koffing</p>
           <table class="poke-details">
             <tr>
@@ -3398,7 +3413,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Weezing</p>
           <table class="poke-details">
             <tr>
@@ -3430,12 +3445,12 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Rhyhorn</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">ground, rock</td>
+              <td class="values">ground rock</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -3460,12 +3475,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Rhydon</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">ground, rock</td>
+              <td class="values">ground rock</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -3490,7 +3505,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Chansey</p>
           <table class="poke-details">
             <tr>
@@ -3520,7 +3535,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Tangela</p>
           <table class="poke-details">
             <tr>
@@ -3550,7 +3565,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Kangaskhan</p>
           <table class="poke-details">
             <tr>
@@ -3582,7 +3597,7 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Horsea</p>
           <table class="poke-details">
             <tr>
@@ -3612,7 +3627,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Seadra</p>
           <table class="poke-details">
             <tr>
@@ -3642,7 +3657,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Goldeen</p>
           <table class="poke-details">
             <tr>
@@ -3672,7 +3687,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Seaking</p>
           <table class="poke-details">
             <tr>
@@ -3702,7 +3717,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Staryu</p>
           <table class="poke-details">
             <tr>
@@ -3734,12 +3749,12 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Starmie</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">water, psychic</td>
+              <td class="values">water psychic</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -3764,12 +3779,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Mr-mime</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">psychic, fairy</td>
+              <td class="values">psychic fairy</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -3794,12 +3809,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Scyther</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">bug, flying</td>
+              <td class="values">bug flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -3824,12 +3839,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Jynx</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">ice, psychic</td>
+              <td class="values">ice psychic</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -3854,7 +3869,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Electabuzz</p>
           <table class="poke-details">
             <tr>
@@ -3886,7 +3901,7 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Magmar</p>
           <table class="poke-details">
             <tr>
@@ -3916,7 +3931,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Pinsir</p>
           <table class="poke-details">
             <tr>
@@ -3946,7 +3961,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Tauros</p>
           <table class="poke-details">
             <tr>
@@ -3976,7 +3991,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Magikarp</p>
           <table class="poke-details">
             <tr>
@@ -4006,12 +4021,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Gyarados</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">water, flying</td>
+              <td class="values">water flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -4038,12 +4053,12 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Lapras</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">water, ice</td>
+              <td class="values">water ice</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -4068,7 +4083,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Ditto</p>
           <table class="poke-details">
             <tr>
@@ -4098,7 +4113,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Eevee</p>
           <table class="poke-details">
             <tr>
@@ -4128,7 +4143,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Vaporeon</p>
           <table class="poke-details">
             <tr>
@@ -4158,7 +4173,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Jolteon</p>
           <table class="poke-details">
             <tr>
@@ -4190,7 +4205,7 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Flareon</p>
           <table class="poke-details">
             <tr>
@@ -4220,7 +4235,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Porygon</p>
           <table class="poke-details">
             <tr>
@@ -4250,12 +4265,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Omanyte</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">rock, water</td>
+              <td class="values">rock water</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -4280,12 +4295,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Omastar</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">rock, water</td>
+              <td class="values">rock water</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -4310,12 +4325,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Kabuto</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">rock, water</td>
+              <td class="values">rock water</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -4342,12 +4357,12 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Kabutops</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">rock, water</td>
+              <td class="values">rock water</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -4372,12 +4387,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Aerodactyl</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">rock, flying</td>
+              <td class="values">rock flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -4402,7 +4417,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Snorlax</p>
           <table class="poke-details">
             <tr>
@@ -4432,12 +4447,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Articuno</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">ice, flying</td>
+              <td class="values">ice flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -4462,12 +4477,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Zapdos</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">electric, flying</td>
+              <td class="values">electric flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -4494,12 +4509,12 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Moltres</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">fire, flying</td>
+              <td class="values">fire flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -4524,7 +4539,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Dratini</p>
           <table class="poke-details">
             <tr>
@@ -4554,7 +4569,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Dragonair</p>
           <table class="poke-details">
             <tr>
@@ -4584,12 +4599,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Dragonite</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">dragon, flying</td>
+              <td class="values">dragon flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -4614,7 +4629,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Mewtwo</p>
           <table class="poke-details">
             <tr>
@@ -4646,7 +4661,7 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Mew</p>
           <table class="poke-details">
             <tr>
@@ -4676,7 +4691,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Chikorita</p>
           <table class="poke-details">
             <tr>
@@ -4706,7 +4721,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Bayleef</p>
           <table class="poke-details">
             <tr>
@@ -4736,7 +4751,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Meganium</p>
           <table class="poke-details">
             <tr>
@@ -4766,7 +4781,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Cyndaquil</p>
           <table class="poke-details">
             <tr>
@@ -4798,7 +4813,7 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Quilava</p>
           <table class="poke-details">
             <tr>
@@ -4828,7 +4843,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Typhlosion</p>
           <table class="poke-details">
             <tr>
@@ -4858,7 +4873,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Totodile</p>
           <table class="poke-details">
             <tr>
@@ -4888,7 +4903,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Croconaw</p>
           <table class="poke-details">
             <tr>
@@ -4918,7 +4933,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Feraligatr</p>
           <table class="poke-details">
             <tr>
@@ -4950,7 +4965,7 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Sentret</p>
           <table class="poke-details">
             <tr>
@@ -4980,7 +4995,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Furret</p>
           <table class="poke-details">
             <tr>
@@ -5010,12 +5025,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Hoothoot</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">normal, flying</td>
+              <td class="values">normal flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -5040,12 +5055,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Noctowl</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">normal, flying</td>
+              <td class="values">normal flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -5070,12 +5085,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Ledyba</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">bug, flying</td>
+              <td class="values">bug flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -5102,12 +5117,12 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Ledian</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">bug, flying</td>
+              <td class="values">bug flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -5132,12 +5147,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Spinarak</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">bug, poison</td>
+              <td class="values">bug poison</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -5162,12 +5177,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Ariados</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">bug, poison</td>
+              <td class="values">bug poison</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -5192,12 +5207,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Crobat</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">poison, flying</td>
+              <td class="values">poison flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -5222,12 +5237,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Chinchou</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">water, electric</td>
+              <td class="values">water electric</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -5254,12 +5269,12 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Lanturn</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">water, electric</td>
+              <td class="values">water electric</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -5284,7 +5299,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Pichu</p>
           <table class="poke-details">
             <tr>
@@ -5314,7 +5329,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Cleffa</p>
           <table class="poke-details">
             <tr>
@@ -5344,12 +5359,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Igglybuff</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">normal, fairy</td>
+              <td class="values">normal fairy</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -5374,7 +5389,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Togepi</p>
           <table class="poke-details">
             <tr>
@@ -5406,12 +5421,12 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Togetic</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">fairy, flying</td>
+              <td class="values">fairy flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -5436,12 +5451,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Natu</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">psychic, flying</td>
+              <td class="values">psychic flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -5466,12 +5481,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Xatu</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">psychic, flying</td>
+              <td class="values">psychic flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -5496,7 +5511,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Mareep</p>
           <table class="poke-details">
             <tr>
@@ -5526,7 +5541,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Flaaffy</p>
           <table class="poke-details">
             <tr>
@@ -5558,7 +5573,7 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Ampharos</p>
           <table class="poke-details">
             <tr>
@@ -5588,7 +5603,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Bellossom</p>
           <table class="poke-details">
             <tr>
@@ -5618,12 +5633,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Marill</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">water, fairy</td>
+              <td class="values">water fairy</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -5648,12 +5663,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Azumarill</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">water, fairy</td>
+              <td class="values">water fairy</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -5678,7 +5693,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Sudowoodo</p>
           <table class="poke-details">
             <tr>
@@ -5710,7 +5725,7 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Politoed</p>
           <table class="poke-details">
             <tr>
@@ -5740,12 +5755,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Hoppip</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">grass, flying</td>
+              <td class="values">grass flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -5770,12 +5785,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Skiploom</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">grass, flying</td>
+              <td class="values">grass flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -5800,12 +5815,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Jumpluff</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">grass, flying</td>
+              <td class="values">grass flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -5830,7 +5845,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Aipom</p>
           <table class="poke-details">
             <tr>
@@ -5862,7 +5877,7 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Sunkern</p>
           <table class="poke-details">
             <tr>
@@ -5892,7 +5907,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Sunflora</p>
           <table class="poke-details">
             <tr>
@@ -5922,12 +5937,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Yanma</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">bug, flying</td>
+              <td class="values">bug flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -5952,12 +5967,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Wooper</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">water, ground</td>
+              <td class="values">water ground</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -5982,12 +5997,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Quagsire</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">water, ground</td>
+              <td class="values">water ground</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -6014,7 +6029,7 @@
       </div>
       <div class="card-row">
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Espeon</p>
           <table class="poke-details">
             <tr>
@@ -6044,7 +6059,7 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Umbreon</p>
           <table class="poke-details">
             <tr>
@@ -6074,12 +6089,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Murkrow</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">dark, flying</td>
+              <td class="values">dark flying</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>
@@ -6104,12 +6119,12 @@
           </table>
         </div>
         <div class="card">
-          <div class="pokemon-avatar"></div>
+          <div class="pokemon-avatar-container"></div>
           <p class="poke-name">Slowking</p>
           <table class="poke-details">
             <tr>
               <th class="specification">Types</th>
-              <td class="values">water, psychic</td>
+              <td class="values">water psychic</td>
             </tr>
             <tr>
               <th class="specification">Weight</th>

@@ -8,11 +8,11 @@ const chunk = function(list, size) {
   return [currentChunk].concat(chunk(remaining, size));
 }
 
-const processCard = (card) => {
+const processCard = (card, index) => {
   const [name, types, _, hp, xp, att, def, weight] = card.split("|");
-  const spacedType = types.replace(",", ", ");
+  const spacedType = types.replace(",", " ");
   const processedCard = `<div class="card">
-  <div class="pokemon-avatar"></div>
+  <div class="pokemon-avatar-container"></div>
   <p class="poke-name">${name}</p>
   <table class="poke-details">
   <tr>
@@ -40,7 +40,7 @@ const processCard = (card) => {
   <td class="values">${def}</td>
   </tr>
   </table>
-</div>`;
+</div>`
 
   return processedCard;
 }
@@ -56,7 +56,7 @@ const processCardRows = (cardRow) => {
 const main = () => {
   const rawData = readFileSync("data.txt", "utf-8");
   const cards = rawData.split("\n");
-  const cardRows = chunk(cards, 5, 0);
+  const cardRows = chunk(cards, 5);
   const processedCardRows = `<section class="cards">
   ${cardRows.map(processCardRows).join("")};
   </section>`;
