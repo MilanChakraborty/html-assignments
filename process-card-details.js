@@ -9,10 +9,13 @@ const chunk = function(list, size) {
 }
 
 const processCard = (card, index) => {
-  const [name, types, _, hp, xp, att, def, weight] = card.split("|");
+  const [pokeID, name, types, _, hp, xp, att, def, weight] = card.split("|");
   const spacedType = types.replace(",", " ");
+  const pokeIDInThreeDigit = pokeID.padStart(3, 0);
   const processedCard = `<div class="card">
-  <div class="pokemon-avatar-container"></div>
+  <div class="pokemon-avatar-container">
+  <img class="pokemon-avatar" src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${pokeIDInThreeDigit}.png"/>
+  </div>
   <p class="poke-name">${name}</p>
   <table class="poke-details">
   <tr>
