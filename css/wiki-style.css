@@ -1,0 +1,87 @@
+* {
+  margin: 0em;
+}
+
+body {
+  background-color: hsl(0, 0%, 95%);
+}
+
+.page {
+  width: 88%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  top: 0%;
+  left: 6%;
+  overflow: scroll;
+  margin: 0 auto;
+}
+
+.page-header {
+  border: 1px solid black;
+  height: 6%;
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+.hamburger-container {
+  position: absolute;
+  height: 2.5em;
+  width: 3%;
+  top: 0.6em;
+  left: 3%;
+}
+
+.hamburger {
+  width: 100%;
+  height: 100%;
+}
+
+.header-logo-container {
+  position: absolute;
+  top: 0.3em;
+  height: 3.2em;
+  width: 12%;
+  left: 7%;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+}
+
+.search-bar-container {
+  border: 1px solid black;
+  position: absolute;
+  top: 0.6em;
+  height: 2.5em;
+  width: 30%;
+  left: 23%
+}
+
+.authentication { 
+  border: 1px solid black;
+  position: absolute;
+  top: 0.6em;
+  height: 2.5em;
+  width: 15%;
+  right: 3%;
+}
+
+.sidebar {
+  border: 1px solid black;
+  width: 15%;
+  height: 40%;
+  position: sticky;
+  top: 1.5%;
+  left: 3%;
+}
+
+.content {
+  border: 1px solid black;
+  height: 200%;
+  width: 60%;
+  position: absolute;
+  left: 22%;
+  top: 11%;
+}
