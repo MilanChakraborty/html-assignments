@@ -1,13 +1,5 @@
 const {readFileSync} = require("fs");
 
-const chunk = function(list, size) {
-  if(list.length === 0) return list;
-
-  const currentChunk = list.slice(0, size);
-  const remaining = list.slice(size);
-  return [currentChunk].concat(chunk(remaining, size));
-}
-
 const processCard = (card) => {
   const [pokeID, name, types, _, hp, xp, att, def, weight] = card.split("|");
   const spacedCategories = types.replace(",", " ");
@@ -48,21 +40,12 @@ const processCard = (card) => {
   return processedCard;
 }
 
-const processCardRows = (cardRow) => {
-  const processedCardRows = `<div class="card-row">
-  ${cardRow.map(processCard).join("\n")}
-  </div>`
-
-  return processedCardRows;
-}
-
 const main = () => {
-  const rawData = readFileSync("data.txt", "utf-8");
+  const rawData = readFileSync("./resources/pokemon-data.txt", "utf-8");
   const cards = rawData.split("\n");
-  const cardRows = chunk(cards, 5);
   const processedCardRows = `<section class="cards">
-  ${cardRows.map(processCardRows).join("")};
-  </section>`;
+  ${cards.map(processCard).join("\n")}
+  </section>`
   console.log(processedCardRows);
 }
 
