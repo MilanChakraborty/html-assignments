@@ -4,37 +4,37 @@ const processCard = (card) => {
   const [pokeID, name, types, _, hp, xp, att, def, weight] = card.split("|");
   const spacedCategories = types.replace(",", " ");
   const pokeIDInThreeDigit = pokeID.padStart(3, 0);
-  const processedCard = `<div class="card">
+  const processedCard = `      <div class="card">
   <div class="pokemon-avatar-container">
-  <img class="pokemon-avatar" src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${pokeIDInThreeDigit}.png"/>
+    <img class="pokemon-avatar" src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${pokeIDInThreeDigit}.png" />
   </div>
-  <p class="poke-name">${name}</p> 
-  <table class="poke-details">
-  <tr>
-  <th class="specification">Types</th>
-  <td class="values">${spacedCategories}</td>
-  </tr>
-  <tr>
-  <th class="specification">Weight</th>
-  <td class="values">${weight}</td>
-  </tr>
-  <tr>
-  <th class="specification">HP</th>
-  <td class="values">${hp}</td>
-  </tr>
-  <tr>
-  <th class="specification">XP</th>
-  <td class="values">${xp}</td>
-  </tr>
-  <tr>
-  <th class="specification">Attack</th>
-  <td class="values">${att}</td>
-  </tr>
-  <tr>
-  <th class="specification">Defence</th>
-  <td class="values">${def}</td>
-  </tr>
-  </table>
+  <p class="poke-name">${name}</p>
+  <div class="poke-details">
+    <div class="specification">
+      <div class="category">Types</div>
+      <div class="value">${spacedCategories}</div>
+    </div>
+    <div class="specification">
+      <div class="category">Weight</div>
+      <div class="value">${weight}</div>
+    </div>
+    <div class="specification">
+      <div class="category">HP</div>
+      <div class="value">${hp}</div>
+    </div>
+    <div class="specification">
+      <div class="category">XP</div>
+      <div class="value">${xp}</div>
+    </div>
+    <div class="specification">
+      <div class="category">Attack</div>
+      <div class="value">${att}</div>
+    </div>
+    <div class="specification">
+      <div class="category">Defence</div>
+      <div class="value">${def}</div>
+    </div>
+  </div>
 </div>`
 
   return processedCard;

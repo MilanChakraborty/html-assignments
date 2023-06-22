@@ -30,27 +30,46 @@ body {
   width: 76%;
   height: 75%;
   padding-bottom: 10em;
+  justify-content: center;
 }
 
 .card {
   border: 0.2em solid rgb(30, 70, 128);
+  box-sizing: content-box;
   border-radius: 3%;
   background-color: hsl(213, 57%, 75%, 0.85);
   box-shadow: 0px 8px 16px hsl(213, 57%, 54%, 0.9);
+  padding-bottom: 0.3em;
   vertical-align: top;
-  height: 26em;
+  height: fit-content
   width: 15em;
 }
 
+.page:has(.card:hover) .card {
+  filter: blur(5px);
+}
+
 .card:hover {
-  background-color: hsl(213, 57%, 65%, 0.9);
-  position: relative;
-  top: 0.1em;
-  box-shadow: none;
+  z-index: 1;
+  filter: none !important;
+}
+
+.card:hover .specification:nth-child(odd){
+  transform: translate(18em, -10em) rotateY(360deg);
+  background-color: hsl(213, 57%, 75%);
+  border: 0.1em solid hsl(213, 57%, 20%);
+}
+
+.card:hover .specification:nth-child(even){
+  transform: translate(-18em, -10em) rotateY(360deg);
+  background-color: hsl(213, 57%, 75%);
+  border: 0.1em solid hsl(213, 57%, 20%);
 }
 
 .pokemon-avatar-container {
   background: linear-gradient(hsl(0, 0%, 85%), hsl(240, 100%, 85%, 0.8));
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier();
   border: 0.1em solid hsl(213, 57%, 50%);
   border-radius: 50%;
   margin: 1em;
@@ -59,30 +78,32 @@ body {
 }
 
 .poke-name {
-  margin: 0em auto;
+  margin: 0.6em auto;
   font-weight: 700;
   border-bottom: 0.12em solid black;
   width: 85%;
 }
 
 .poke-details {
-  width: 100%;
+  display: flex;
+  padding: 0.2em 0.3em;
+  flex-direction: column;
+}
+
+.specification {
+  padding: 0.1em 0.5em;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier();
+  justify-content: space-between;
+  border: 0.1em solid transparent;
+  display: flex;
+}
+
+.category {
   font-size: 0.9em;
-  padding: 0.6em;
+  font-weight: 500;
 }
 
-.poke-details tr {
-  border-collapse: collapse;
-}
-
-.poke-details th {
-  font-weight: 600;
-  text-align: left;
-  border-bottom: 0.1em dotted black;
-}
-
-.poke-details td {
-  font-weight: 400;
-  text-align: right;
-  border-bottom: 0.1em dotted black;
+.value {
+  font-size: 0.9em;
 }
