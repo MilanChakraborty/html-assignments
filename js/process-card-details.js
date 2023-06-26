@@ -1,4 +1,4 @@
-const {readFileSync} = require("fs");
+const { readFileSync } = require("fs");
 
 const processCard = (card) => {
   const [pokeID, name, types, _, hp, xp, att, def, weight] = card.split("|");
@@ -46,7 +46,7 @@ const main = () => {
   const processedCardRows = `<section class="cards">
   ${cards.map(processCard).join("\n")}
   </section>`
-  console.log(processedCardRows);
+  // console.log(processedCardRows);
 }
 
 main();
